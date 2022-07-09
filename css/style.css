@@ -1,9 +1,10 @@
 :root {
-
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
     margin: 0;
+    background-color: #f4f5fc;
 }
 
 .container {
@@ -14,16 +15,25 @@ body {
 
 .sidebar {
     grid-area: 1 / 1 / 4 / 2;
+    background-color: #fff;
+    display: grid;
+    grid-template: 1fr 8fr / 1fr;
 }
 
 .header {
     grid-area: 1 / 2 / 2 / 3;
+    order: 1;
+    display: grid;
+    grid-template: 1fr / 1fr 6fr;
+    grid-auto-flow: column;
+    padding: 0 50px;
 }
 
 .top-background {
     grid-area: 1 / 2 / 3 / 3;
-    background-color: #4400ff1f;
-    border-bottom-left-radius: 100%;
+    background-color: #4c6bf9;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
 }
 
 .content {
@@ -34,13 +44,68 @@ body {
     padding: 25px;
 }
 
-ul {
-    list-style: none;
+.content-item {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 25px;
 }
 
-a {
+ul {
+    list-style: none;
+    justify-self: left;
+    font-size: 1.75rem;
+    min-width: 210px;
+}
+
+li {
+    position: relative;
+    right: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.home {
     color: #000;
     font-weight: 900;
     text-decoration: none;
     font-size: 2rem;
+    place-self: center;
+}
+
+.icons {
+    justify-self: right;
+    align-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 50px;
+    color: #fff;
+}
+
+.icons > svg {
+    cursor: pointer;
+}
+
+.notification,
+.mail {
+    align-self: center;
+}
+
+.search {
+    border-radius: 25px;
+    border: none;
+    padding: 10px;
+    padding-left: 30px;
+    height: 15px;
+    align-self: center;
+}
+
+.search-bar {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.search-bar > label {
+    align-self: center;
+    position: relative;
+    left: 27px;
 }
