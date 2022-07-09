@@ -1,0 +1,46 @@
+:root {
+
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 1fr 10fr / 1fr 6fr;
+}
+
+.sidebar {
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+.header {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.top-background {
+    grid-area: 1 / 2 / 3 / 3;
+    background-color: #4400ff1f;
+    border-bottom-left-radius: 100%;
+}
+
+.content {
+    grid-area: 2 / 2 / 4 / 3;
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(250px, 1fr)) / 1fr 1fr;
+    gap: 25px;
+    padding: 25px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 2rem;
+}
