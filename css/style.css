@@ -10,7 +10,7 @@ body {
 .container {
     height: 100vh;
     display: grid;
-    grid-template: 1fr 1fr 10fr / 1fr 6fr;
+    grid-template: 1fr 1fr 10fr / 250px 6fr;
 }
 
 .sidebar {
@@ -39,15 +39,17 @@ body {
 .content {
     grid-area: 2 / 2 / 4 / 3;
     display: grid;
-    grid-template: repeat(auto-fit, minmax(250px, 1fr)) / repeat(auto-fit, minmax(500px, 1fr));
+    grid-template: 1fr 1fr / repeat(auto-fit, minmax(500px, 1fr));
     gap: 25px;
     padding: 25px;
+    overflow: auto;
 }
 
 .content-item {
     background-color: #fff;
     border-radius: 25px;
     padding: 25px;
+    min-height: 250px;
 }
 
 .bar {
@@ -136,18 +138,15 @@ progress {
     accent-color: #4c6bf9;
 }
 
-ul {
-    list-style: none;
-    justify-self: left;
+.sidebar > div {
+    cursor: pointer;
     font-size: 1.75rem;
-    min-width: 210px;
+    margin-top: 15px;
+    justify-self: center;
 }
 
-li {
-    position: relative;
-    right: 25px;
-    cursor: pointer;
-    margin-top: 10px;
+.sidebar > div > div {
+    margin-top: 15px;
 }
 
 .home {
