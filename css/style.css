@@ -163,6 +163,7 @@ progress {
     display: grid;
     grid-auto-flow: column;
     gap: 50px;
+    padding-left: 50px;
     color: #fff;
 }
 
@@ -176,21 +177,25 @@ progress {
 }
 
 .search {
+    font-family: inherit;
+    font-size: 1rem;
+    grid-area: 1 / 1 / 2 / 2;
     border-radius: 25px;
     border: none;
-    padding: 10px;
     padding-left: 30px;
-    height: 15px;
+    height: 40px;
     align-self: center;
 }
 
 .search-bar {
     display: grid;
-    grid-auto-flow: column;
+    grid-template: 1fr / 1fr;
+    width: 250px;
 }
 
 .search-bar > label {
+    grid-area: 1 / 1 / 2 / 2;
     align-self: center;
-    position: relative;
-    left: 27px;
+    order: 1;
+    padding-left: 5px;
 }
