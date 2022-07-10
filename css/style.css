@@ -39,7 +39,7 @@ body {
 .content {
     grid-area: 2 / 2 / 4 / 3;
     display: grid;
-    grid-template: repeat(auto-fit, minmax(250px, 1fr)) / 1fr 1fr;
+    grid-template: repeat(auto-fit, minmax(250px, 1fr)) / repeat(auto-fit, minmax(500px, 1fr));
     gap: 25px;
     padding: 25px;
 }
@@ -48,6 +48,92 @@ body {
     background-color: #fff;
     border-radius: 25px;
     padding: 25px;
+}
+
+.bar {
+    display: grid;
+    grid-template: 1fr 1fr 4fr / 1fr 1fr 1fr;
+}
+
+.sub-text {
+    grid-area: 1 / 1 / 2 / 2;
+    font-weight: 600;
+    color: #525252;
+    padding-left: 4px;
+    align-self: center;
+}
+
+.number {
+    grid-area: 2 / 1 / 3 / 2;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.day {
+    grid-area: 1 / 3 / 2 / 4;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    color: #fff;
+    justify-self: right;
+    align-self: center;
+}
+
+.content-item-1 > .day {
+    background-color: #019601;
+}
+
+.content-item-2 > .day {
+    background-color: #c00000;
+}
+
+.content-item-3 > .day {
+    background-color: #4c6bf9;
+}
+
+.content-item-1 > label {
+    color: #019601;
+    grid-area: 3 / 3 / 4 / 4;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+.content-item-2 > label {
+    color: #c00000;
+    grid-area: 3 / 2 / 4 / 3;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+.content-item-3 > label {
+    color: #4c6bf9;
+    grid-area: 3 / 1 / 4 / 2;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+progress {
+    grid-area: 3 / 1 / 4 / 4;
+    place-self: center;
+    width: 100%;
+    height: 30px;
+}
+
+.progress-1 {
+    accent-color: #019601;
+}
+
+.progress-2 {
+    accent-color: #c00000;
+}
+
+.progress-3 {
+    accent-color: #4c6bf9;
 }
 
 ul {
