@@ -7,6 +7,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
     <div class="container">
@@ -39,7 +40,7 @@
         <div class="content">
             <div class="content-item bar content-item-1">
                 <div class="sub-text">Revenue</div>
-                <div class="number">$13096</div>
+                <div class="number">$10096</div>
                 <div class="day">Today</div>
                 <label for="file">83%</label>
                 <progress class="progress-1" value="82.5" max="100"></progress>
@@ -53,14 +54,20 @@
             </div>
             <div class="content-item bar content-item-3">
                 <div class="sub-text">Leads</div>
-                <div class="number">$1237</div>
+                <div class="number">$92370</div>
                 <div class="day">This month</div>
                 <label for="file">17%</label>
                 <progress class="progress-3" value="16.5" max="100"></progress>
             </div>
-            <div class="content-item graph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, tempora ullam illo impedit animi voluptas autem, blanditiis veritatis repudiandae atque, neque ex laboriosam! Modi, odio quibusdam totam facilis, voluptate fugit officiis quis quae quas cupiditate repudiandae aliquam consequatur cumque odit libero tempore culpa molestiae recusandae voluptates! Illo vitae placeat deleniti?</div>
-            <div class="content-item graph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe atque dolorem praesentium officiis eaque quibusdam nulla temporibus tenetur debitis nam, explicabo minima odit asperiores iure, assumenda culpa illum? Quasi iusto quisquam fuga sequi! Autem asperiores sed maxime blanditiis consequuntur ipsam sunt alias distinctio illum sapiente, provident odio ea perferendis est.</div>
-            <div class="content-item graph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolorem molestiae neque tempore odio eligendi ducimus ullam doloribus eos nostrum suscipit cumque repudiandae reprehenderit veritatis, quidem, quibusdam omnis optio similique quaerat repellendus possimus nulla! Iste aliquam minus voluptatibus inventore voluptates neque optio laudantium ducimus ipsum omnis cupiditate, placeat, et illo!</div>
+            <div class="content-item graph-wrap">
+                <div class="graph" id="pie-chart-3d"></div>
+            </div>
+            <div class="content-item graph-wrap">
+                <div class="graph" id="gauge"></div>
+            </div>
+            <div class="content-item graph-wrap">
+                <div class="graph" id="line-chart"></div>
+            </div>
         </div>
     </div>
 </body>
